@@ -1,0 +1,17 @@
+#global {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 150px;
+    border-style: double;
+    border-width: 4px;
+    font-size: large;
+}
+
+span {
+    text-decoration: underline;
+}
+
+#reponse {
+    margin: 20px;
+}
