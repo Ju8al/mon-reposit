@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>EXO_5.6</title>
+</head>
+
+<body>
+    <header>Calcul de votre salaire</header>
+    <p>Bonjour et bienvenue dans notre entreprise. <br> Veuillez remplir le formulaire ci-dessous afin que nous puissions calculer votre salaire. </p>
+    <form name="genre" action="">
+        <div class="titre">Genre</div>
+        <div class="Radio">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Homme</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Femme</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Autre</label>
+        </div>
+        <div class="titre">Situation de handicap</div>
+        <div class="Radio">
+            <input type="radio" id="true" name="handicap" value="true">
+            <label for="yes">OUI</label><br>
+            <input type="radio" id="false" name="handicap" value="false">
+            <label for="no">NON</label><br>
+        </div>
+        <div class="titre">Désirez-vous profiter de notre assurance interne ?</div>
+        <div class="Radio">
+            <input type="radio" id="oui" name="assurance" value="true">
+            <label for="yes">OUI</label><br>
+            <input type="radio" id="non" name="assurance" value="false">
+            <label for="no">NON</label><br>
+        </div>
+        <div class="titre">Etes-vous résident canadien ?</div>
+        <div class="Radio">
+            <input type="radio" id="pos" name="local" value="true">
+            <label for="yes">OUI</label><br>
+            <input type="radio" id="neg" name="local" value="false">
+            <label for="no">NON</label><br>
+        </div>
+
+
+        <div class="form">
+            <label for="genre">Nombre de personnes à charge</label>
+            <input type="number" name="nbPers" id="nbPers" placeholder="0" class="champ">
+        </div>
+        <div id="button">
+            <input onclick="send()" type="button" value="Envoyer">
+            <div id="fin"> Votre salaire est estimé a
+                <div id="result"></div> $ </div>
+        </div>
+
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
