@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#cadre {
+    position: absolute;
+    background-image: url(Image/unnamed.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    border-width: 15px;
+    border-color: rgb(182, 77, 16);
+    border-style: ridge;
+}
+
+#heure {
+    position: relative;
+    font-size: 700%;
+    font-family: "digital";
+    color: rgb(124, 255, 2);
+    text-shadow: 5px 5px black;
+}
+
+@font-face {
+    font-family: "digital";
+    src: url(police/digital.ttf);
+}
