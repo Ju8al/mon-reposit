@@ -1,14 +1,20 @@
+// appel a l'API
 fetch('http://localhost:3000/users')
     .then(response => response.json())
     .then(json => {
-        console.log(json)
 
-        let divBox = document.getElementById("divBox") //creation variable de stockage de mes div
+        //creation variable de stockage de mes div
+        let divBox = document.getElementById("divBox")
         for (let i = 0; i < json.length; i++) {
-            let linkUsername = document.createElement("a"); //creation d'un h3 que je mettrais dans ma div pour y stocker mes username
-            let username = document.createTextNode(json[i].username); //récuperation des username
-            linkUsername.setAttribute("href", "/posts.html?userId=" + json.users("userId"))
-            linkUsername.appendChild(username); // ajoute name dans mes h3
-            divBox.appendChild(linkUsername); // ajoute le contenant à la div de mon html
+            //creation d'un lien hyperText que je mettrais dans ma div pour y stocker mes username cliquable
+            let linkUsername = document.createElement("a");
+            //récuperation des username
+            let username = document.createTextNode(json[i].username);
+            //rattachement du lien hyperText avec l' attribut href afin de remplacer la page par la nouvelle avec l'id correspondant 
+            linkUsername.setAttribute("href", "/posts.html?id=" + json[i].id);
+            //ajout de name dans mes h3
+            linkUsername.appendChild(username);
+            //ajout du contenant à la div de mon html
+            divBox.appendChild(linkUsername);
         }
     });
