@@ -27,6 +27,7 @@ fetch("http://localhost:3000/posts?userId=" + userId)
         for (let i = 0; i < json.length; i++) {
             //creation d'une div pour chaques posts
             const div = document.createElement("div");
+            div.className = "divPosts";
             //ceation des h3 que je mettrais dans mes div pour y stocker mes title
             const titleContent = document.createElement("h3");
             //creation d'un p que je mettrais dans mes div pour y stocker mes body

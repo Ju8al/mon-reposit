@@ -28,18 +28,21 @@ fetch("http://localhost:3000/comments?postId=" + userId)
         for (let i = 0; i < json.length; i++) {
             //creation d'une div pour chaques commentaires
             const div = document.createElement("div");
+            div.className = "divComments";
             //ceation des h3 que je mettrais dans mes div pour y stocker mes name
             const nameContent = document.createElement("h3");
             //creation d'un p que je mettrais dans mes div pour y stocker mes body
             const bodyContent = document.createElement("p");
-            //ceation des h3 que je mettrais dans mes div pour y stocker mes email
-            const emailContent = document.createElement("h3");
+            //ceation des a que je mettrais dans mes div pour y stocker mes email cliquable
+            const emailContent = document.createElement("a");
             //récuperation des name
             const name = document.createTextNode(json[i].name);
             //récuperation des body 
             const body = document.createTextNode(json[i].body);
             //récuperation des email
             const email = document.createTextNode(json[i].email);
+            // permet au lien de renvoyer vers notre boite mail afin d'envoyer un mail a l'auteur du commentaire
+            emailContent.setAttribute("href", "mailto:" + json[i].email);
             // ajout de mes div dans ma divBox
             divBox.appendChild(div);
             // ajout de mes name dans mes nameContent
@@ -54,7 +57,6 @@ fetch("http://localhost:3000/comments?postId=" + userId)
             div.appendChild(bodyContent);
             // ajout des emailContent à mes div
             div.appendChild(emailContent);
-
 
         }
     })

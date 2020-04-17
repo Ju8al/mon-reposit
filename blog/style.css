@@ -1,8 +1,62 @@
-a {
+/* -----------------------------general------------------------ */
+
+#divBox {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 70px;
 }
+
+
+/* -------------------------Page Principale---------------------*/
 
 span {
     color: red;
+}
+
+h1 {
+    height: 60px;
+    align-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.link {
+    color: black;
+    background-color: rgb(255, 192, 74);
+    text-align: center;
+    font-size: 1.1em;
+    border-radius: 30px;
+    border-style: solid;
+    font-weight: bold;
+    margin: 0 20px 40px;
+    padding-top: 8px;
+    width: 180px;
+    height: 50px;
+}
+
+
+/* ----------------Les Posts---------------------- */
+
+.divPosts {
+    background-color: rgb(255, 192, 74);
+    border-style: solid;
+    margin-bottom: 10px;
+    padding: 10px;
+    min-height: 25vh;
+    width: 400vw;
+}
+
+
+/* ----------------Les commentaires---------------------- */
+
+.divComments {
+    background-color: rgb(255, 192, 74);
+    border-style: solid;
+    margin-bottom: 10px;
+    padding: 10px;
+    min-height: 25vh;
+    width: 400vw;
 }
