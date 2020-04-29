@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+#title{
+  font-family: 'Dancing Script', cursive;
+}
+
+#add{
+  font-family: 'Lato', sans-serif;
+}
+
+#del{
+  font-family: 'Lato', sans-serif;
+}
